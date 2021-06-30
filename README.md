@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# CV in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my first project in React!
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+CV in React is fetching data from an api located on my web server at https://florianegrosset.com/api/cv/read.php?id=1 and displaying the different sections in a dynamic way. Please refer to the folder cv-api at https://github.com/grosset-floriane/cv-api for more information about it.
 
-### `npm start`
+CV in React is currently in development. For now its purpose is to display my own cv and I am currently working on the first styling (CodingLightTheme) from mobile to desktop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Styles
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Styles components
 
-### `npm test`
+The styles are written with the use of Styled Components (https://styled-components.com).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Current theme
 
-### `npm run build`
+I am currently working on the first theme: CodeLightTheme. You can have a view of how the cv will look like in the future here: https://docs.google.com/document/d/1Qkxr9QHt0LkvpzlyZIt7j6DDMx5b8ZZ9l9zKTq-v7vo/edit?usp=sharing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This style is inspired by the way code is displayed on the Visual Studio Code editor, in a light version, to enable printing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Further developements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Multiple styles
 
-### `npm run eject`
+I am planning to enable by button click the display of the cv in other themes such as a coding dark mode (CodingDarkTheme) and one traditional paper print (PaperPrintTheme).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Hover: enhance what a cv can be online
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+While creating the database for the cv-api, I pre-planned to add hovering functionalities on the cv entries and linking to other pages. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Forms: add / remove / order data
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I would like to create forms to add content to the database and maybe to enable reordering of the elements in the page, the creation of new categories and much more.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## About the author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+My name is Floriane Grosset and I am a web developper based in Hamburg, Germany. I am currently learning React and this project is here to help me learn with a concrete result. 
+You can learn more about me at: https://florianegrosset.com/
