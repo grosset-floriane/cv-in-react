@@ -22,3 +22,15 @@ font-size: 1.6rem;
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inconsolata', sans-serif;
 }
+
+
+#section-4 li, #section-6 li {
+  display: flex;
+  align-items: center;
+}
+
+#section-6 h3::after {
+  content: ' ';
+  display: inline-block;
+  padding-right: 1rem;
+}

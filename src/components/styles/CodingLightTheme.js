@@ -9,6 +9,9 @@ const colorTheme = {
 }
 
 const CodingLightTheme = {
+    // Media queries
+    tablet: '651px',
+    desktop: '1025px',
     
     // Background
     backgroundColor: colorTheme.colorWhite,
@@ -19,12 +22,14 @@ const CodingLightTheme = {
 
     // Colors to text
     colorTitle: colorTheme.colorBlack,
+    colorHeadline: colorTheme.colorGreen,
     colorCategoryTitle: colorTheme.colorBlack,
     colorEntryTitle: colorTheme.colorBlue,
     colorEntrySubtitle: colorTheme.colorBlue,
     colorEntryDates: colorTheme.colorGreen,
     colorDescription: colorTheme.colorRed,
     colorLinks: colorTheme.colorBlue,
+    colorBrackets: colorTheme.colorBlack,
 
     // Font sizes
     fontSizeBiggest: "4rem",
@@ -39,7 +44,10 @@ const CodingLightTheme = {
     // Margins
     spacingMobile: "1.3rem",
     spacingTablet: "2.4rem",
-    spacingDesktop: "5rem"
+    spacingDesktop: "5rem",
+
+    // Heights
+    heightHeader: "6rem"
 
   };
 

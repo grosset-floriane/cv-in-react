@@ -11,6 +11,7 @@ function CvContentSection(props) {
                 description={entry.description}
                 startDate={entry['start_date']}
                 endDate={entry['end_date']}
+                link={entry['link_to_post']}
                 key={entry['content_id']}
             />
         );
@@ -24,7 +25,7 @@ function CvContentSection(props) {
 
 
     return(
-        <section>
+        <section id={"section-" + props.id}>
             <CategoryTitle>
                 {props.categoryData['category_name']}
             </CategoryTitle>

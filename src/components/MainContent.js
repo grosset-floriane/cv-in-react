@@ -1,6 +1,11 @@
 import React from 'react';
 import CvHeader from './cv/CvHeader';
 import CvContent from './cv/CvContent';
+import styled from 'styled-components';
+
+const Main = styled.main`
+            padding-top: ${props => props.theme.heightHeader} ; 
+    `;
 
 class MainContent extends React.Component {
 
@@ -12,6 +17,8 @@ class MainContent extends React.Component {
             cvContent: [],
             isLoading: false
         }
+        
+
     }
 
     componentDidMount() {
@@ -27,18 +34,16 @@ class MainContent extends React.Component {
                 })
                 
             })
-            .then();
-
     }
 
+    
     render() {
-        console.log(this.state.cvContent);
+        
         return(
-            <main>
-                <h2>{this.state.cvGeneral.cvName} CV</h2>
+            <Main>
                 <CvHeader userData={this.state.cvUserData}/>
                 <CvContent cvContent={this.state.cvContent} />
-            </main>
+            </Main>
         );
     }
     

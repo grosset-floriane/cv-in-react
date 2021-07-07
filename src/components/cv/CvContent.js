@@ -1,6 +1,7 @@
 import React from 'react';
 import CvContentSection from './CvContentSection';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Wrapper from '../styles/Wrapper';
 
 function CvMain(props) {
     const cvContentMainComponents = props.cvContent.map(category => {
@@ -10,6 +11,7 @@ function CvMain(props) {
                 <CvContentSection  
                         key={category[0]['category_id']} 
                         categoryData={category[0]} 
+                        id={category[0]['category_id']}
                         categoryContent={category[3]}
                     />
                     
@@ -23,41 +25,44 @@ function CvMain(props) {
     const cvContentAsideComponents = props.cvContent.map(category => {
 console.log(category[3]);
         if(category[1] === "aside") {
+            console.log(category[0]['category_id']);
             return(
                 <CvContentSection  
                         key={category[0]['category_id']} 
+                        id={category[0]['category_id']}
                         categoryData={category[0]} 
                         categoryContent={category[3]}
                     />
                     
             );
+
+
         } else {
             return(<></>);
         }
         
     })
 
-    const Wrapper = styled.div`
-        display: flex;
-        justify-content: space-between;
-        padding: 5rem;
-        padding-top: 0;
-        max-width: 90rem;
-        margin-left: auto;
-        margin-right: auto;
-    `;
+    
 
     const MainColumn = styled.div`
-        width: 50rem;
+        width: 100%;
+        @media (min-width: ${props => props.theme.tablet}) {
+            width: 50rem;
+        }
+        
     `;
 
     const AsideColumn = styled.div`
-        width: 25rem;
+        width: 100%;
+        @media (min-width: ${props => props.theme.tablet}) {
+            width: 25rem;
+        }
     `;
 
 
     return(
-        <CvStructure>
+        <Wrapper>
             <MainColumn>
                 {cvContentMainComponents}
             </MainColumn>
@@ -65,7 +70,7 @@ console.log(category[3]);
                 {cvContentAsideComponents}
             </AsideColumn>
             
-        </CvStructure>
+        </Wrapper>
     );
 }
 
