@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {formatDate} from '../../functions/formatDate';
+
 
 function ContentEntry(props) {
 
@@ -9,17 +11,24 @@ function ContentEntry(props) {
         margin: .5em 0;
         color: ${props => props.theme.colorEntryDates};
     `;
+
     let dateLine = "";
     if(props.startDate !== "0000-00-00") {
+        const startDate = formatDate(props.startDate);
         if(props.endDate !== "0000-00-00") {
-            dateLine = <Period>From {props.startDate} to {props.endDate}</Period>;
+            const endDate = formatDate(props.endDate);
+            dateLine = <Period>From {startDate} to {endDate}</Period>;
         } else {
-            dateLine = <Period>From {props.startDate} until today</Period>;
+            dateLine = <Period>From {startDate} until today</Period>;
         }
     }
 
+    const EntryItem = styled.li`
+        margin-bottom: 2rem;
+    `;
+
     const EntryTitle = styled.h3`
-        font-size: 1.6rem;
+        font-size: ${props => props.theme.fontSizeLarge};
         color: ${props => props.theme.colorEntryTitle};
 
         a {
@@ -28,7 +37,7 @@ function ContentEntry(props) {
     `;
 
     const EntrySubtitle = styled.span`
-        font-size: 1.5rem;
+        font-size: ${props => props.theme.fontSizeSmaller};
         display: block;
         font-weight: 400;
         color: ${props => props.theme.colorEntrySubtitle};
@@ -48,7 +57,7 @@ function ContentEntry(props) {
     `;
 
     const EntryDescription = styled.p`
-        font-size: 1.3rem;
+        font-size: ${props => props.theme.fontSizeSmaller};
         color: ${props => props.theme.colorDescription};
         margin: .5em 0;
 
@@ -60,19 +69,15 @@ function ContentEntry(props) {
     } else if (props.title !== undefined) {
         title = props.title;
     }
-    console.log(props.link);
 
     return (
-        <li>
+        <EntryItem>
             <EntryTitle>{title} 
                 {props.subtitle && <EntrySubtitle>{props.subtitle}</EntrySubtitle>} 
             </EntryTitle>
             {dateLine}
             {props.description && <EntryDescription> {props.description} </EntryDescription>}
-
-
-
-        </li>
+        </EntryItem>
         
     );
 }

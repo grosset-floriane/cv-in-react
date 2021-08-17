@@ -5,42 +5,30 @@ import Wrapper from '../styles/Wrapper';
 
 function CvMain(props) {
     const cvContentMainComponents = props.cvContent.map(category => {
-
-        if(category[1] === "main") {
-            return(
-                <CvContentSection  
-                        key={category[0]['category_id']} 
-                        categoryData={category[0]} 
-                        id={category[0]['category_id']}
-                        categoryContent={category[3]}
-                    />
-                    
+            return( category[1] === "main" && 
+                        <CvContentSection  
+                            key={category[0]['category_id']} 
+                            categoryData={category[0]} 
+                            id={category[0]['category_id']}
+                            categoryContent={category[3]}
+                            location="main"
+                        /> 
             );
-        } else {
-            return(<></>);
-        }
+        
         
     })
 
     const cvContentAsideComponents = props.cvContent.map(category => {
-console.log(category[3]);
-        if(category[1] === "aside") {
-            console.log(category[0]['category_id']);
-            return(
-                <CvContentSection  
-                        key={category[0]['category_id']} 
-                        id={category[0]['category_id']}
-                        categoryData={category[0]} 
-                        categoryContent={category[3]}
-                    />
+            return(category[1] === "aside" &&
+                        <CvContentSection  
+                                key={category[0]['category_id']} 
+                                id={category[0]['category_id']}
+                                categoryData={category[0]} 
+                                categoryContent={category[3]}
+                                location="aside"
+                            />
                     
             );
-
-
-        } else {
-            return(<></>);
-        }
-        
     })
 
     
@@ -48,7 +36,11 @@ console.log(category[3]);
     const MainColumn = styled.div`
         width: 100%;
         @media (min-width: ${props => props.theme.tablet}) {
-            width: 50rem;
+            width: 42rem;
+        }
+
+        @media (min-width: ${props => props.theme.desktop}) {
+            width: 45rem;
         }
         
     `;

@@ -23,6 +23,7 @@ const CodingLightTheme = {
     // Colors to text
     colorTitle: colorTheme.colorBlack,
     colorHeadline: colorTheme.colorGreen,
+    colorAddress: colorTheme.colorBlack,
     colorCategoryTitle: colorTheme.colorBlack,
     colorEntryTitle: colorTheme.colorBlue,
     colorEntrySubtitle: colorTheme.colorBlue,
@@ -47,7 +48,7 @@ const CodingLightTheme = {
     spacingDesktop: "5rem",
 
     // Heights
-    heightHeader: "6rem"
+    heightHeader: "6.3rem"
 
   };
 

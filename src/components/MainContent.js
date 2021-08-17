@@ -1,10 +1,17 @@
 import React from 'react';
 import CvHeader from './cv/CvHeader';
-import CvContent from './cv/CvContent';
+import CvContent from './cv/CvContent'
+//import StyleNav from './StyleNav';
 import styled from 'styled-components';
 
 const Main = styled.main`
             padding-top: ${props => props.theme.heightHeader} ; 
+            padding-bottom: calc(${props => props.theme.heightHeader} / 2); 
+
+            @media (min-width: ${props => props.theme.tablet}) {
+            padding-top: calc(${props => props.theme.heightHeader} * 1.5);
+            padding-bottom: ${props => props.theme.heightHeader} ; 
+        }
     `;
 
 class MainContent extends React.Component {

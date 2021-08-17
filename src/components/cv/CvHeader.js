@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from '../styles/Links';
+import CategoryTitle from '../styles/CategoryTitle';
 
 function CvHeader(props) {
     const CvHeader = styled.div`
@@ -9,7 +10,7 @@ function CvHeader(props) {
         
         padding: ${props => props.theme.spacingMobile};
         padding-bottom: 0;
-        max-width: 90rem;
+        max-width: 80rem;
         margin-left: auto;
         margin-right: auto;
 
@@ -17,6 +18,8 @@ function CvHeader(props) {
             flex-direction: row;
             justify-content: space-between;
             padding: ${props => props.theme.spacingTablet};
+            padding-bottom: 0;
+            
         }
 
         
@@ -38,34 +41,68 @@ function CvHeader(props) {
     const CvTitle = styled.h3`
         width: 100%;
         font-size: 3.5rem;
-        margin: 2rem 0;
+        margin: 2rem 0 0;
         color: ${props => props.theme.colorTitle};
 
         @media (min-width: ${props => props.theme.tablet}) {
             font-size: 4rem;
+            width: 42rem;
+            margin-top: 0;
+        }
+
+        @media (min-width: ${props => props.theme.desktop}) {
+            
+            width: 45rem;
         }
     `;
 
     const UserData = styled.div`
         width: 100%;
-        font-size: 1.3rem;
-        margin-top: .5rem;
-        display: flex;
-        justify-content: space-between;
+        font-size: ${props => props.theme.fontSizeSmaller};
+        > div {
+            display: flex;
+            justify-content: space-between;
+            line-height: ${props => props.theme.fontSizeLarge};
+        }
+        
+
+        @media (min-width: ${props => props.theme.tablet}) {
+            width: 25rem;
+            > div {
+                flex-direction: column;
+                margin-top: 0.5rem;
+                line-height: initial;
+            }
+            h2 {
+                margin-top: 0.5rem;
+                display: none;
+            }
+        }
     `;
 
     const Address = styled.p`
-        width: calc(50% - .5rem);
+        width: calc(40% - .5rem);
+        color: ${props => props.theme.colorAddress};
+        @media (min-width: ${props => props.theme.tablet}) {
+            
+            width: auto;
+        }
     `;
 
     const Contact = styled.div`
-        width: calc(50% - .5rem);
+        width: calc(60% - .5rem);
     `;
 
     const userAddress = props.userData.address;
     let addressArray = [];
     if(userAddress !== undefined) {
         addressArray = userAddress.split(',');    
+    }
+
+    const userPhone = props.userData["phone_number"];
+    let userPhoneLink = "";
+    if(userPhone !== undefined) {
+        userPhoneLink = userPhone.replace(/ /g,'');    
     }
     
 
@@ -75,23 +112,28 @@ function CvHeader(props) {
                 {props.userData.name}
                 <CvHeadline>{props.userData.tagline}</CvHeadline>
             </CvTitle>
+            
             <UserData>
-                <Address>
-                    {addressArray[0]}<br />
-                    {addressArray[1]}<br />
-                    {addressArray[2]}
-                </Address>
+                <CategoryTitle>CONTACT</CategoryTitle >
+                <div>
+                    <Address>
+                        {addressArray[0]},<br />
+                        {addressArray[1]},<br />
+                        {addressArray[2]}
+                    </Address>
 
-                <Contact>
-                    <p><Link href="tel:">{props.userData["phone_number"]}</Link></p>
+                    <Contact>
+                        <p><Link href={"tel:" + userPhoneLink}>{props.userData["phone_number"]}</Link></p>
 
-                    {/* How to mix strings and JS script here */}
-                    <p><Link href="mailto:">{props.userData.email}</Link></p>
-                    <p>
-                        <Link href={props.userData.website}>
-                            https://{props.userData.website}</Link>
-                    </p>
-                </Contact>
+                        {/* How to mix strings and JS script here */}
+                        <p><Link href={"mailto:" + props.userData.email } >{props.userData.email}</Link></p>
+                        <p>
+                            <Link href={"https://" + props.userData.website}>
+                                https://{props.userData.website}</Link>
+                        </p>
+                    </Contact>
+                </div>
+                
 
                 
             </UserData>

@@ -5,7 +5,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         padding: ${props => props.theme.spacingMobile};
         padding-top: 0;
-        max-width: 90rem;
+        max-width: 80rem;
         margin-left: auto;
         margin-right: auto;
 

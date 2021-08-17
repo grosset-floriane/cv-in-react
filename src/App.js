@@ -6,10 +6,16 @@ import './index.css';
 import { ThemeProvider } from "styled-components";
 import CodingLightTheme from "./components/styles/CodingLightTheme";
 
+const currentTheme = CodingLightTheme;
+
 class App extends React.Component {
+  
+  
+
+
   render() {
     return(
-      <ThemeProvider theme={CodingLightTheme}>
+      <ThemeProvider theme={currentTheme}>
         <Header />
         <MainContent />
         <Footer />

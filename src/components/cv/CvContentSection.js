@@ -21,11 +21,14 @@ function CvContentSection(props) {
         font-size: ${props => props.theme.fontSizeLarge};
         margin-top: 2em;
         margin-bottom: 1em;
+        text-transform: uppercase;
     `;
+
+    
 
 
     return(
-        <section id={"section-" + props.id}>
+        <section id={"section-" + props.id} className={props.location}>
             <CategoryTitle>
                 {props.categoryData['category_name']}
             </CategoryTitle>
