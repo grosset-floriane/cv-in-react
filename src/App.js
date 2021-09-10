@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import MainContent from './components/MainContent';
+import CvPage from './pages/CvPage.js';
 import Footer from './components/Footer';
 import './index.css';
 import { ThemeProvider } from "styled-components";
@@ -17,7 +17,7 @@ class App extends React.Component {
     return(
       <ThemeProvider theme={currentTheme}>
         <Header />
-        <MainContent />
+        <CvPage />
         <Footer />
       </ThemeProvider>
     );

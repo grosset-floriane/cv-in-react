@@ -1,7 +1,6 @@
 import React from 'react';
-import CvHeader from './cv/CvHeader';
-import CvContent from './cv/CvContent'
-//import StyleNav from './StyleNav';
+import CvHeader from '../components/cv/CvHeader';
+import CvContent from '../components/cv/CvContent'
 import styled from 'styled-components';
 
 const Main = styled.main`
@@ -14,7 +13,7 @@ const Main = styled.main`
         }
     `;
 
-class MainContent extends React.Component {
+class CvPage extends React.Component {
 
     constructor() {
         super();
@@ -56,4 +55,4 @@ class MainContent extends React.Component {
     
 }
 
-export default MainContent;
+export default CvPage;
