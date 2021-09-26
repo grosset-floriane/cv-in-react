@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
 import Link from '../styles/Links';
 import CategoryTitle from '../styles/CategoryTitle';
+import {cvContext} from "../../context/cvContext";
 
 function CvHeader(props) {
+    const {userData} = useContext(cvContext);
+
     const CvHeader = styled.div`
         display: flex;
         flex-direction: column;
@@ -93,13 +96,13 @@ function CvHeader(props) {
         width: calc(60% - .5rem);
     `;
 
-    const userAddress = props.userData.address;
+    const userAddress = userData.address;
     let addressArray = [];
     if(userAddress !== undefined) {
         addressArray = userAddress.split(',');    
     }
 
-    const userPhone = props.userData["phone_number"];
+    const userPhone = userData["phone_number"];
     let userPhoneLink = "";
     if(userPhone !== undefined) {
         userPhoneLink = userPhone.replace(/ /g,'');    
@@ -109,8 +112,8 @@ function CvHeader(props) {
     return(
         <CvHeader>
             <CvTitle >
-                {props.userData.name}
-                <CvHeadline>{props.userData.tagline}</CvHeadline>
+                {userData.name}
+                <CvHeadline>{userData.tagline}</CvHeadline>
             </CvTitle>
             
             <UserData>
@@ -123,13 +126,13 @@ function CvHeader(props) {
                     </Address>
 
                     <Contact>
-                        <p><Link href={"tel:" + userPhoneLink}>{props.userData["phone_number"]}</Link></p>
+                        <p><Link href={`tel:${userPhoneLink}`}>{userData["phone_number"]}</Link></p>
 
                         {/* How to mix strings and JS script here */}
-                        <p><Link href={"mailto:" + props.userData.email } >{props.userData.email}</Link></p>
+                        <p><Link href={`mailto:${userData.email }`} >{userData.email}</Link></p>
                         <p>
-                            <Link href={"https://" + props.userData.website}>
-                                https://{props.userData.website}</Link>
+                            <Link href={`https://${userData.website}`}>
+                                https://{userData.website}</Link>
                         </p>
                     </Contact>
                 </div>

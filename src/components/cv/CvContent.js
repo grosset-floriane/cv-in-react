@@ -1,37 +1,30 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import CvContentSection from './CvContentSection';
 import styled from 'styled-components';
 import Wrapper from '../styles/Wrapper';
+import {cvContext} from "../../context/cvContext";
 
-function CvMain(props) {
-    const cvContentMainComponents = props.cvContent.map(category => {
-            return( category[1] === "main" && 
-                        <CvContentSection  
-                            key={category[0]['category_id']} 
-                            categoryData={category[0]} 
-                            id={category[0]['category_id']}
-                            categoryContent={category[3]}
-                            location="main"
-                        /> 
-            );
-        
-        
-    })
+function CvMain() {
+    const {cvContent} = useContext(cvContext);
 
-    const cvContentAsideComponents = props.cvContent.map(category => {
-            return(category[1] === "aside" &&
-                        <CvContentSection  
-                                key={category[0]['category_id']} 
-                                id={category[0]['category_id']}
-                                categoryData={category[0]} 
-                                categoryContent={category[3]}
-                                location="aside"
-                            />
-                    
-            );
-    })
+    function getComponent(category) {
+        return(
+            <CvContentSection  
+                key={category[0]['category_id']} 
+                id={category[0]['category_id']}
+                categoryData={category[0]} 
+                categoryContent={category[3]}
+                location={category[1]}
+            />
+        );
+    }
 
-    
+    const arrayMainCategories = cvContent.filter(category => category[1] === "main"); 
+    const mainComponents = arrayMainCategories.map(category => getComponent(category));
+
+    const arrayAsideCategories = cvContent.filter(category => category[1] === "aside"); 
+    const asideComponents = arrayAsideCategories.map(category => getComponent(category));
+
 
     const MainColumn = styled.div`
         width: 100%;
@@ -56,10 +49,10 @@ function CvMain(props) {
     return(
         <Wrapper>
             <MainColumn>
-                {cvContentMainComponents}
+                {mainComponents}
             </MainColumn>
             <AsideColumn>
-                {cvContentAsideComponents}
+                {asideComponents}
             </AsideColumn>
             
         </Wrapper>

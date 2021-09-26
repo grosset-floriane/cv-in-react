@@ -2,10 +2,12 @@ import React from 'react';
 import CvHeader from '../components/cv/CvHeader';
 import CvContent from '../components/cv/CvContent'
 import styled from 'styled-components';
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const Main = styled.main`
             padding-top: ${props => props.theme.heightHeader} ; 
             padding-bottom: calc(${props => props.theme.heightHeader} / 2); 
+            background-color: ${props => props.theme.backgroundColor};
 
             @media (min-width: ${props => props.theme.tablet}) {
             padding-top: calc(${props => props.theme.heightHeader} * 1.5);
@@ -13,46 +15,14 @@ const Main = styled.main`
         }
     `;
 
-class CvPage extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            cvGeneral: {},
-            cvUserData: {},
-            cvContent: [],
-            isLoading: false
-        }
-        
-
-    }
-
-    componentDidMount() {
-        this.setState({isLoading: true});
-        fetch('https://florianegrosset.com/api/cv/read.php?id=1')
-            .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    cvGeneral: data.cvGeneral,
-                    cvUserData: data.cvUserData,
-                    cvContent: data.cvContent,
-                    isLoading: false
-                })
-                
-            })
-    }
-
-    
-    render() {
-        
+function CvPage() {        
         return(
             <Main>
-                <CvHeader userData={this.state.cvUserData}/>
-                <CvContent cvContent={this.state.cvContent} />
+                <ThemeSwitcher />
+                <CvHeader />
+                <CvContent />
             </Main>
-        );
-    }
-    
+        );    
 }
 
 export default CvPage;
