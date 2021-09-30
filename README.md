@@ -39,3 +39,6 @@ I would like to create forms to add content to the database and maybe to enable 
 
 My name is Floriane Grosset and I am a web developper based in Hamburg, Germany. I am currently learning React and this project is here to help me learn with a concrete result. 
 You can learn more about me at: https://florianegrosset.com/
+
+## Log of changes
+- 27/09/2021: from class components to functional components; set cvContext to handle global context; create function and buttons to switch themes 
