@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
-import Navigation from "./Navigation"
-
-
+import Navigation from "./Navigation";
+import {cvContext} from "../context/cvContext";
+import CodingDarkTheme from "../components/styles/CodingDarkTheme";
+import logoWhite from "../images/logo-white.png";
+import logoBlack from "../images/logo.png";
 
 function Header() {
+    const {theme} = useContext(cvContext);
+
+    const logo = theme === CodingDarkTheme ? logoWhite : logoBlack;
 
     const SiteHeader = styled.header`
         position: fixed;
@@ -59,7 +64,7 @@ function Header() {
             
                 <SiteTitle>
                     <a href="https://www.florianegrosset.com/webdesign/">
-                        <img src="https://www.florianegrosset.com/webdesign/img/logo.png" alt="Logo" />
+                        <img src={logo} alt="Logo" />
                         Flo's Webdesign
                     </a>
                 </SiteTitle>

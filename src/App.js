@@ -3,19 +3,26 @@ import Header from './components/Header';
 import CvPage from './pages/CvPage.js';
 import Footer from './components/Footer';
 import './index.css';
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import {cvContext} from "./context/cvContext";
 
 // const currentTheme = CodingLightTheme;
 
 function App() {
     const {theme} = useContext(cvContext);
+    const Wrapper = styled.div`
+      background-color: ${props => props.theme.backgroundColor};
+
+    `;
 
     return(
       <ThemeProvider theme={theme}>
-        <Header />
-        <CvPage />
-        <Footer />
+        <Wrapper>
+          <Header />
+          <CvPage />
+          <Footer />
+        </Wrapper>
+        
       </ThemeProvider>
     );
 }

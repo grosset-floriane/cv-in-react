@@ -9,6 +9,7 @@ function Navigation() {
             color: black;
             font-family: ${props => props.theme.fontHeadings};
             font-weight: 700;
+            color: ${props => props.theme.colorTitle};
             @media (min-width: ${props => props.theme.tablet}) {
                 font-size : ${props => props.theme.fontSizeLarge};
             }

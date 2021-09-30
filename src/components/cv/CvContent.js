@@ -6,7 +6,7 @@ import {cvContext} from "../../context/cvContext";
 
 function CvMain() {
     const {cvContent} = useContext(cvContext);
-
+    
     function getComponent(category) {
         return(
             <CvContentSection  
@@ -25,7 +25,7 @@ function CvMain() {
     const arrayAsideCategories = cvContent.filter(category => category[1] === "aside"); 
     const asideComponents = arrayAsideCategories.map(category => getComponent(category));
 
-
+    console.log(asideComponents )
     const MainColumn = styled.div`
         width: 100%;
         @media (min-width: ${props => props.theme.tablet}) {

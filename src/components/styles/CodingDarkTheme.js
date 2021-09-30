@@ -1,7 +1,8 @@
 const colorTheme = {
     // Colors
         colorRed: "#ce9178",
-        colorBlue: "#0071bc",
+        colorBlue: "#309ce4",
+        colorLightBlue: "#b1def7",
         colorGreen: "#679147",
         colorYellow: "#dcdcaa",
         colorBlack: "#1e1e1e",
@@ -28,11 +29,11 @@ const colorTheme = {
         colorAddress: colorTheme.colorYellow,
         colorCategoryTitle: colorTheme.colorWhite,
         colorEntryTitle: colorTheme.colorBlue,
-        colorEntrySubtitle: colorTheme.colorBlue,
+        colorEntrySubtitle: colorTheme.colorLightBlue,
         colorEntryDates: colorTheme.colorYellow,
         colorDescription: colorTheme.colorRed,
         colorLinks: colorTheme.colorBlue,
-        colorBrackets: colorTheme.colorWhite,
+        colorBrackets: colorTheme.colorLightBlue,
     
         // Font sizes
         fontSizeBiggest: "4rem",

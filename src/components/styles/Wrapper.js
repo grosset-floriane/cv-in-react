@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
-        padding: ${props => props.theme.spacingMobile};
         padding-top: 0;
         max-width: 80rem;
         margin-left: auto;
@@ -12,7 +11,6 @@ const Wrapper = styled.div`
         @media (min-width: ${props => props.theme.tablet}) {
             flex-direction: row;
             justify-content: space-between;
-            padding: ${props => props.theme.spacingTablet};
         }
     `;
 

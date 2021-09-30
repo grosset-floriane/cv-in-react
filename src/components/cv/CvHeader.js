@@ -7,11 +7,10 @@ import {cvContext} from "../../context/cvContext";
 function CvHeader(props) {
     const {userData} = useContext(cvContext);
 
-    const CvHeader = styled.div`
+    const CvHeader = styled.header`
         display: flex;
         flex-direction: column;
         
-        padding: ${props => props.theme.spacingMobile};
         padding-bottom: 0;
         max-width: 80rem;
         margin-left: auto;
@@ -20,8 +19,8 @@ function CvHeader(props) {
         @media (min-width: ${props => props.theme.tablet}) {
             flex-direction: row;
             justify-content: space-between;
-            padding: ${props => props.theme.spacingTablet};
             padding-bottom: 0;
+            padding-top: ${props => props.theme.spacingTablet};
             
         }
 

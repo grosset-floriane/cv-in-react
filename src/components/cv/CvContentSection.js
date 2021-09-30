@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentEntry from './ContentEntry';
-import styled from 'styled-components';
+import CategoryTitle from '../styles/CategoryTitle';
 
 function CvContentSection(props) {
     const cvContentEntryComponents = props.categoryContent.map(entry => {
@@ -16,13 +16,6 @@ function CvContentSection(props) {
             />
         );
     })
-
-    const CategoryTitle = styled.h2`
-        font-size: ${props => props.theme.fontSizeLarge};
-        margin-top: 2em;
-        margin-bottom: 1em;
-        text-transform: uppercase;
-    `;
 
     
 

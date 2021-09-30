@@ -10,7 +10,7 @@ function Footer() {
         margin: 0;
         line-height: ${props => props.theme.fontSizeSmall};
         background-color: ${props => props.theme.backgroundColor};
-
+        color: ${props => props.theme.colorTitle};
         
 
         @media (min-width: ${props => props.theme.tablet}) {
@@ -20,6 +20,7 @@ function Footer() {
                 max-width: 80rem;
                 margin: auto;
                 padding: ${props => props.theme.spacingTablet};
+                
             }
             
         }

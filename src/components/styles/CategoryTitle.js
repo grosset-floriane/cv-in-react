@@ -5,6 +5,7 @@ const CategoryTitle = styled.h2`
         margin-top: 2em;
         margin-bottom: 1em;
         text-transform: uppercase;
+        color: ${props => props.theme.colorCategoryTitle};
     `;
 
 export default CategoryTitle;
