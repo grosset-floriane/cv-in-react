@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {formatDate} from '../../functions/formatDate';
+import {formatDate} from '../../../functions/formatDate';
 
 
 function ContentEntry(props) {

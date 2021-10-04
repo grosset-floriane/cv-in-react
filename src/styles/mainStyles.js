@@ -1,10 +1,6 @@
-import React from 'react';
-import CvHeader from '../components/cv/CvHeader';
-import CvContent from '../components/cv/CvContent'
 import styled from 'styled-components';
-import ThemeSwitcher from "../components/ThemeSwitcher";
 
-const Main = styled.main`
+const  Main = styled.main`
             padding-top: ${props => props.theme.heightHeader} ; 
             padding-bottom: calc(${props => props.theme.heightHeader} / 2); 
             padding-right: ${props => props.theme.spacingMobile};
@@ -22,14 +18,4 @@ const Main = styled.main`
         }
     `;
 
-function CvPage() {        
-        return(
-            <Main>
-                <ThemeSwitcher />
-                <CvHeader />
-                <CvContent />
-            </Main>
-        );    
-}
-
-export default CvPage;
+export default Main;

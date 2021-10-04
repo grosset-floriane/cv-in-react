@@ -1,15 +1,16 @@
 import React, {useContext} from 'react';
-import CvContentSection from './CvContentSection';
-import styled from 'styled-components';
-import Wrapper from '../styles/Wrapper';
-import {cvContext} from "../../context/cvContext";
+import {cvContext} from "../../../context/cvContext";
+
+import CategorySection from './CategorySection';
+
+import {MainColumn, AsideColumn, Wrapper} from "./columnsStyles";
 
 function CvMain() {
     const {cvContent} = useContext(cvContext);
     
     function getComponent(category) {
         return(
-            <CvContentSection  
+            <CategorySection  
                 key={category[0]['category_id']} 
                 id={category[0]['category_id']}
                 categoryData={category[0]} 
@@ -25,25 +26,8 @@ function CvMain() {
     const arrayAsideCategories = cvContent.filter(category => category[1] === "aside"); 
     const asideComponents = arrayAsideCategories.map(category => getComponent(category));
 
-    console.log(asideComponents )
-    const MainColumn = styled.div`
-        width: 100%;
-        @media (min-width: ${props => props.theme.tablet}) {
-            width: 42rem;
-        }
 
-        @media (min-width: ${props => props.theme.desktop}) {
-            width: 45rem;
-        }
-        
-    `;
-
-    const AsideColumn = styled.div`
-        width: 100%;
-        @media (min-width: ${props => props.theme.tablet}) {
-            width: 25rem;
-        }
-    `;
+    
 
 
     return(

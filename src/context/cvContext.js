@@ -1,5 +1,5 @@
 import React, {createContext, useState, useEffect} from "react";
-import CodingLightTheme from "../components/styles/CodingLightTheme";
+import CodingLightTheme from "../styles/themes/CodingLightTheme";
 
 
 const cvContext = createContext();

@@ -1,6 +1,6 @@
 import React from 'react';
-import ContentEntry from './ContentEntry';
-import CategoryTitle from '../styles/CategoryTitle';
+import ContentEntry from './Entry';
+import CategoryTitle from '../../../styles/CategoryTitle';
 
 function CvContentSection(props) {
     const cvContentEntryComponents = props.categoryContent.map(entry => {

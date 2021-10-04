@@ -14,4 +14,23 @@ const Wrapper = styled.div`
         }
     `;
 
-export default Wrapper;
+const MainColumn = styled.div`
+width: 100%;
+@media (min-width: ${props => props.theme.tablet}) {
+    width: 42rem;
+}
+
+@media (min-width: ${props => props.theme.desktop}) {
+    width: 45rem;
+}
+
+`;
+
+const AsideColumn = styled.div`
+width: 100%;
+@media (min-width: ${props => props.theme.tablet}) {
+    width: 25rem;
+}
+`;
+
+export {MainColumn, AsideColumn, Wrapper}; 
