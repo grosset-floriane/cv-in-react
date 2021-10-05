@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import {cvContext} from "../../../context/cvContext"; 
-import CodingLightTheme from "../../../styles/themes/CodingLightTheme";
-import CodingDarkTheme from "../../../styles/themes/CodingDarkTheme";
-import PaperPrintTheme from "../../../styles/themes/PaperPrintTheme";
-import PlainTheme from "../../../styles/themes/PlainTheme";
+import codingLightTheme from "../../../styles/themes/codingLightTheme";
+import codingDarkTheme from "../../../styles/themes/codingDarkTheme";
+import paperPrintTheme from "../../../styles/themes/paperPrintTheme";
+import plainTheme from "../../../styles/themes/plainTheme";
 import {SwitchSection, SwitcherTitle} from "./themeSwitcherStyles";
 
 import Button from "../../../styles/Button"
@@ -20,27 +20,27 @@ function ThemeSwitcher() {
             
 
             <Button 
-                className={theme === CodingLightTheme && activeClass} 
+                className={theme === codingLightTheme && activeClass} 
                 onClick={() => 
-                    setTheme(CodingLightTheme)}>
+                    setTheme(codingLightTheme)}>
                         Coding Light
             </Button>
 
             <Button 
-                className={theme === CodingDarkTheme && activeClass} 
+                className={theme === codingDarkTheme && activeClass} 
                 onClick={() => 
-                    setTheme(CodingDarkTheme)}>
+                    setTheme(codingDarkTheme)}>
                         Coding Dark
             </Button>
 
             <Button 
-                className={theme === PlainTheme && activeClass} 
+                className={theme === plainTheme && activeClass} 
                 onClick={() => {}}>
                         Plain
             </Button>
 
             <Button 
-                className={theme === PaperPrintTheme && activeClass} 
+                className={theme === paperPrintTheme && activeClass} 
                 onClick={() => {}}>
                         Paper
             </Button>

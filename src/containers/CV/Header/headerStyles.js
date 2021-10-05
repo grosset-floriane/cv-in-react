@@ -9,11 +9,11 @@ max-width: 80rem;
 margin-left: auto;
 margin-right: auto;
 
-@media (min-width: ${props => props.theme.tablet}) {
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 0;
-    padding-top: ${props => props.theme.spacingTablet};
+    padding-top: ${props => props.theme.spacings.tablet};
     
 }
 
@@ -25,7 +25,7 @@ font-size: 1.5rem;
 font-weight: 400;
 display: block;
 margin-top: 1rem;
-color: ${props => props.theme.colorHeadline};
+color: ${props => props.theme.colors.headline};
 
 &::before {
     content: '// ';
@@ -37,15 +37,15 @@ const CvTitle = styled.h3`
 width: 100%;
 font-size: 3.5rem;
 margin: 2rem 0 0;
-color: ${props => props.theme.colorTitle};
+color: ${props => props.theme.colors.title};
 
-@media (min-width: ${props => props.theme.tablet}) {
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     font-size: 4rem;
     width: 42rem;
     margin-top: 0;
 }
 
-@media (min-width: ${props => props.theme.desktop}) {
+@media (min-width: ${props => props.theme.mediaQueries.desktop}) {
     
     width: 45rem;
 }
@@ -53,15 +53,15 @@ color: ${props => props.theme.colorTitle};
 
 const UserData = styled.div`
 width: 100%;
-font-size: ${props => props.theme.fontSizeSmaller};
+font-size: ${props => props.theme.fontSizes.smaller};
 > div {
     display: flex;
     justify-content: space-between;
-    line-height: ${props => props.theme.fontSizeLarge};
+    line-height: ${props => props.theme.fontSizes.large};
 }
 
 
-@media (min-width: ${props => props.theme.tablet}) {
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     width: 25rem;
     > div {
         flex-direction: column;
@@ -77,8 +77,8 @@ font-size: ${props => props.theme.fontSizeSmaller};
 
 const Address = styled.p`
 width: calc(40% - .5rem);
-color: ${props => props.theme.colorAddress};
-@media (min-width: ${props => props.theme.tablet}) {
+color: ${props => props.theme.colors.address};
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     
     width: auto;
 }

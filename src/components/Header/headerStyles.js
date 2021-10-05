@@ -6,8 +6,8 @@ const SiteHeader = styled.header`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: ${props => props.theme.backgroundColor};
-        border-bottom: 1px solid ${props => props.theme.colorTitle};
+        background-color: ${props => props.theme.background.color};
+        border-bottom: 1px solid ${props => props.theme.colors.title};
 
         a {
             text-decoration: none;
@@ -22,8 +22,8 @@ const SiteHeader = styled.header`
         width: max-content;
         font-size: 1.8rem;
         width: 55%;
-        margin: ${props => props.theme.spacingMobile} 0;
-        @media (min-width: ${props => props.theme.tablet}) {
+        margin: ${props => props.theme.spacings.mobile} 0;
+        @media (min-width: ${props => props.theme.mediaQueries.tablet}) {
             font-size: 2.5rem;
             width: auto;
             
@@ -33,14 +33,14 @@ const SiteHeader = styled.header`
 
         img {
             width: 56px;
-            padding: 0 ${props => props.theme.spacingMobile};
+            padding: 0 ${props => props.theme.spacings.mobile};
             margin: 0;
             position: relative;
             top: -1px;
         }
 
         a{ 
-            color: ${props => props.theme.colorTitle};
+            color: ${props => props.theme.colors.title};
             display: flex;
             align-items: center;
             

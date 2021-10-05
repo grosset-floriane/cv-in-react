@@ -1,5 +1,5 @@
 import React, {createContext, useState, useEffect} from "react";
-import CodingLightTheme from "../styles/themes/CodingLightTheme";
+import codingLightTheme from "../styles/themes/codingLightTheme";
 
 
 const cvContext = createContext();
@@ -8,7 +8,7 @@ function CvContextProvider(props) {
     const [userData, setUserData] = useState({});
     const [cvContent, setCvContent] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [theme, setTheme] = useState(CodingLightTheme);
+    const [theme, setTheme] = useState(codingLightTheme);
 
     useEffect(() => {
         setIsLoading(true);

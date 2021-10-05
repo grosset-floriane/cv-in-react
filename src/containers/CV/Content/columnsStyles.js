@@ -8,7 +8,7 @@ const Wrapper = styled.div`
         margin-left: auto;
         margin-right: auto;
 
-        @media (min-width: ${props => props.theme.tablet}) {
+        @media (min-width: ${props => props.theme.mediaQueries.tablet}) {
             flex-direction: row;
             justify-content: space-between;
         }
@@ -16,11 +16,11 @@ const Wrapper = styled.div`
 
 const MainColumn = styled.div`
 width: 100%;
-@media (min-width: ${props => props.theme.tablet}) {
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     width: 42rem;
 }
 
-@media (min-width: ${props => props.theme.desktop}) {
+@media (min-width: ${props => props.theme.mediaQueries.desktop}) {
     width: 45rem;
 }
 
@@ -28,7 +28,7 @@ width: 100%;
 
 const AsideColumn = styled.div`
 width: 100%;
-@media (min-width: ${props => props.theme.tablet}) {
+@media (min-width: ${props => props.theme.mediaQueries.tablet}) {
     width: 25rem;
 }
 `;

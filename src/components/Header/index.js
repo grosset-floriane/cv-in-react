@@ -3,7 +3,7 @@ import {cvContext} from "../../context/cvContext";
 
 import Navigation from "../Navigation/";
 
-import CodingDarkTheme from "../../styles/themes/CodingDarkTheme";
+import codingDarkTheme from "../../styles/themes/codingDarkTheme";
 import logoWhite from "../../assets/images/logo-white.png";
 import logoBlack from "../../assets/images/logo.png";
 
@@ -12,7 +12,7 @@ import {SiteHeader, SiteTitle} from "./headerStyles";
 function Header() {
     const {theme} = useContext(cvContext);
 
-    const logo = theme === CodingDarkTheme ? logoWhite : logoBlack;
+    const logo = theme === codingDarkTheme ? logoWhite : logoBlack;
 
     
 

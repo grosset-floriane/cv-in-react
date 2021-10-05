@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const Period = styled.p`
-    font-size: ${props => props.theme.fontSizeSmallest};
+    font-size: ${props => props.theme.fontSizes.smallest};
     text-transform: uppercase;
     margin: .5em 0;
-    color: ${props => props.theme.colorEntryDates};
+    color: ${props => props.theme.colors.entryDates};
 `;
 
 const EntryItem = styled.li`
@@ -12,8 +12,8 @@ const EntryItem = styled.li`
     `;
 
     const EntryTitle = styled.h3`
-        font-size: ${props => props.theme.fontSizeLarge};
-        color: ${props => props.theme.colorEntryTitle};
+        font-size: ${props => props.theme.fontSizes.large};
+        color: ${props => props.theme.colors.entryTitle};
 
         a {
             color: inherit;
@@ -21,28 +21,28 @@ const EntryItem = styled.li`
     `;
 
     const EntrySubtitle = styled.span`
-        font-size: ${props => props.theme.fontSizeSmaller};
+        font-size: ${props => props.theme.fontSizes.smaller};
         display: block;
         font-weight: 400;
-        color: ${props => props.theme.colorEntrySubtitle};
+        color: ${props => props.theme.colors.entrySubtitle};
         margin: .4em 0;
 
         &::after{
             content: ']';
-            color: ${props => props.theme.colorBrackets};
+            color: ${props => props.theme.colors.brackets};
 
         }
 
         &::before{
             content: '[';
-            color: ${props => props.theme.colorBrackets};
+            color: ${props => props.theme.colors.brackets};
 
         }
     `;
 
     const EntryDescription = styled.p`
-        font-size: ${props => props.theme.fontSizeSmaller};
-        color: ${props => props.theme.colorDescription};
+        font-size: ${props => props.theme.fontSizes.smaller};
+        color: ${props => props.theme.colors.description};
         margin: .5em 0;
 
     `;

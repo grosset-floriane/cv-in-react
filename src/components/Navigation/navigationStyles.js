@@ -5,14 +5,14 @@ const NavList = styled.ul`
 
         a {
             color: black;
-            font-family: ${props => props.theme.fontHeadings};
+            font-family: ${props => props.theme.fonts.headings};
             font-weight: 700;
-            color: ${props => props.theme.colorTitle};
-            @media (min-width: ${props => props.theme.tablet}) {
-                font-size : ${props => props.theme.fontSizeLarge};
+            color: ${props => props.theme.colors.title};
+            @media (min-width: ${props => props.theme.mediaQueries.tablet}) {
+                font-size : ${props => props.theme.fontSizes.large};
             }
 
-            padding: ${props => props.theme.spacingMobile};
+            padding: ${props => props.theme.spacings.mobile};
             
 
             &:first-child {
