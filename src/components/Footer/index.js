@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FooterSt from "./footerStyles";
+import StyledFooter from "./footerStyles";
 import Link from '../../styles/Links';
 
 function Footer() {
     
     return(
-        <FooterSt>
+        <StyledFooter>
        
                 <p>
                     This CV was made with React.js by Floriane Grosset <br /> 
@@ -16,7 +16,7 @@ function Footer() {
                 </p>
         
             
-        </FooterSt>
+        </StyledFooter>
     );
 }
 

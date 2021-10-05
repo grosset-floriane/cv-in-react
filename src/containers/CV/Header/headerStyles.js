@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CvHeaderStyle = styled.header`
+const StyledCvHeader = styled.header`
 display: flex;
 flex-direction: column;
 
@@ -88,4 +88,4 @@ const Contact = styled.div`
 width: calc(60% - .5rem);
 `;
 
-export {CvHeaderStyle, CvHeadline, CvTitle, UserData, Address, Contact};
+export {StyledCvHeader, CvHeadline, CvTitle, UserData, Address, Contact};
