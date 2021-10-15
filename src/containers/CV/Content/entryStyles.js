@@ -14,7 +14,7 @@ const EntryItem = styled.li`
     const EntryTitle = styled.h3`
         font-size: ${props => props.theme.fontSizes.large};
         color: ${props => props.theme.colors.entryTitle};
-
+        font-family: ${props => props.theme.fonts.headings};
         a {
             color: inherit;
         }

@@ -2,8 +2,8 @@ X Convert into functional components and hooks
 X Set cvContext to fetch data
 X Set cvContext to change theme of cv
 X style switcher
-- clean up code
+X clean up code
 - create new themes
-- clean up styles
+X clean up styles
 - reorganize cv
 - update content

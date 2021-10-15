@@ -6,6 +6,7 @@ const CategoryTitle = styled.h2`
         margin-bottom: 1em;
         text-transform: uppercase;
         color: ${props => props.theme.colors.categoryTitle};
+        font-family: ${props => props.theme.fonts.headings};
     `;
 
 export default CategoryTitle;

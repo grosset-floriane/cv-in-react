@@ -35,7 +35,8 @@ function ThemeSwitcher() {
 
             <Button 
                 className={theme === plainTheme && activeClass} 
-                onClick={() => {}}>
+                onClick={() => 
+                    setTheme(plainTheme)}>
                         Plain
             </Button>
 

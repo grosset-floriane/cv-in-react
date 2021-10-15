@@ -3,7 +3,9 @@ import { ThemeProvider } from "styled-components";
 
 import {cvContext} from "./context/cvContext";
 
-import './index.css';
+import GlobalStyle from "./styles/GlobalStyle";
+
+// import './index.css';
 import Wrapper from "./styles/wrapperStyles";
 
 import CV from './containers/CV/';
@@ -15,6 +17,7 @@ function App() {
   
   return(
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Wrapper>
         <Header />
         <CV />
