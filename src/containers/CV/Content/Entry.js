@@ -18,7 +18,7 @@ function ContentEntry(props) {
 
     let title = "";
     if( props.title !== undefined && props.link !== "") {
-        title = <a href={props.link}>{props.title}</a>;
+        title = <a href={props.link} target="_blank" rel="noreferrer">{props.title}</a>;
     } else if (props.title !== undefined) {
         title = props.title;
     }
