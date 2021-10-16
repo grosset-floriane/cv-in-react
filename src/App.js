@@ -15,6 +15,7 @@ import Footer from './components/Footer/';
 function App() {
   const {theme} = useContext(cvContext);
   
+  
   return(
     <ThemeProvider theme={theme}>
       <GlobalStyle />

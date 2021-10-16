@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body, html {
         margin: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: ${props => props.theme.fonts.body};
         overflow-x: hidden;
         scroll-behavior: smooth;
         font-size: 1.6rem;
