@@ -3,6 +3,8 @@ import colors from "./colors";
 
 const codingLightTheme = {
     ...commonThemeProps,
+    id: "T_001",
+    name: "Coding Light",
     
     
     background: {

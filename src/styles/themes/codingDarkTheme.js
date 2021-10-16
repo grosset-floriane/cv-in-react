@@ -5,7 +5,8 @@ import lightenColor from "../../functions/lightenColor";
     
 const codingDarkTheme = {
   ...commonThemeProps,
-
+  id: "T_002",
+  name: "Coding Dark",
 
   background: {
     color: colors.grey
