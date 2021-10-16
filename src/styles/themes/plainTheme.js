@@ -1,9 +1,10 @@
 import commonThemeProps from "./commonThemeProps";
 import colors from "./colors";
 
-const codingDarkTheme = {
+const plainTheme = {
     ...commonThemeProps,
-  
+    id: "T_003",
+    name: "Plain",
   
     background: {
       color: colors.white
@@ -24,10 +25,10 @@ const codingDarkTheme = {
 
     fonts:{
         ...commonThemeProps.fonts,
-        headings: "Roboto, sansSerif"
+        headings: commonThemeProps.fonts.body,
     }
   
   };
       
       
-  export default codingDarkTheme;
+  export default plainTheme;

@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentEntry from './Entry';
 import CategoryTitle from '../../../styles/CategoryTitle';
+import StyledCategorySection from "./categoryStyles";
 
 function CvContentSection(props) {
     const cvContentEntryComponents = props.categoryContent.map(entry => {
@@ -21,7 +22,10 @@ function CvContentSection(props) {
 
 
     return(
-        <section id={"section-" + props.id} className={props.location}>
+        <StyledCategorySection 
+            id={"section-" + props.id} 
+            className={props.location}
+        >
             <CategoryTitle>
                 {props.categoryData['category_name']}
             </CategoryTitle>
@@ -29,7 +33,7 @@ function CvContentSection(props) {
                 {cvContentEntryComponents}
             </ul>
             
-        </section>
+        </StyledCategorySection>
     );
 }
 

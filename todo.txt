@@ -3,7 +3,7 @@ X Set cvContext to fetch data
 X Set cvContext to change theme of cv
 X style switcher
 X clean up code
-- create new themes
+X create new themes
 X clean up styles
 - reorganize cv
 - update content

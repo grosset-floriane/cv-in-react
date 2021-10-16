@@ -3,7 +3,7 @@ import {cvContext} from "../../../context/cvContext";
 
 import CategorySection from './CategorySection';
 
-import {MainColumn, AsideColumn, Wrapper} from "./columnsStyles";
+import {MainColumn, AsideColumn, WrapperContent} from "./columnsStyles";
 
 function CvMain() {
     const {cvContent} = useContext(cvContext);
@@ -31,7 +31,7 @@ function CvMain() {
 
 
     return(
-        <Wrapper>
+        <WrapperContent>
             <MainColumn>
                 {mainComponents}
             </MainColumn>
@@ -39,7 +39,7 @@ function CvMain() {
                 {asideComponents}
             </AsideColumn>
             
-        </Wrapper>
+        </WrapperContent>
     );
 }
 

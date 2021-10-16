@@ -14,7 +14,7 @@ const EntryItem = styled.li`
     const EntryTitle = styled.h3`
         font-size: ${props => props.theme.fontSizes.large};
         color: ${props => props.theme.colors.entryTitle};
-        font-family: ${props => props.theme.fonts.headings};
+
         a {
             color: inherit;
         }
@@ -28,13 +28,15 @@ const EntryItem = styled.li`
         margin: .4em 0;
 
         &::after{
-            content: ']';
+            display: ${props => props.theme.name === "Paper Print" ? "none" : "inline"};
+            content: "]";
             color: ${props => props.theme.colors.brackets};
 
         }
 
         &::before{
-            content: '[';
+            display: ${props => props.theme.name === "Paper Print" ? "none" : "inline"};
+            content: "[";
             color: ${props => props.theme.colors.brackets};
 
         }

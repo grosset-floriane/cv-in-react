@@ -33,7 +33,7 @@ function CvHeader(props) {
                 </CvTitle>
                 
                 <UserData>
-                    <CategoryTitle>CONTACT</CategoryTitle >
+                    <CategoryTitle>Contact</CategoryTitle >
                     <div>
                         <Address>
                             {addressArray[0]},<br />
